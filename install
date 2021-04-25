@@ -5,8 +5,6 @@ sudo apt-get install kodi-eventclients-kodi-send
 
 sudo mkdir -p /usr/local/bin
 
-chmod +x kodi_button.py
-
 sudo cp kodi_button.py /usr/local/bin
 sudo cp kodi_button.service /etc/systemd/system
 
