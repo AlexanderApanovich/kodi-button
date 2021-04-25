@@ -8,7 +8,7 @@ Guide for Raspberry PI 4:
 3. cd kodi-button
 4. sudo ./install
 5. sudo crontab -e
-6. Add following string:
+Add following string:
 @reboot python /bin/kodi_button.py &
 
 Uninstallation guide:
