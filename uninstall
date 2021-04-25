@@ -1,0 +1,8 @@
+#! /bin/sh
+
+systemctl stop kodi_button
+systemctl disable kodi_button
+rm /etc/systemd/system/kodi_button
+rm /usr/lib/systemd/system/kodi_button
+systemctl daemon-reload
+systemctl reset-failed
