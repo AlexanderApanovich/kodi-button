@@ -29,7 +29,7 @@ def runKodi():
 def closeKodi():
     try:
         command = "kodi-send --host=192.168.100.17 --action='Quit'"
-        subprocess.check_output([])
+        subprocess.check_output(command.split())
     except Exception:
         pass
 
