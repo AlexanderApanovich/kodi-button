@@ -1,9 +1,15 @@
 #! /bin/sh
 
+set -e
+
+cd "$(dirname "$0")/.."
+
 systemctl stop kodi_button
 systemctl disable kodi_button
+
 rm /etc/systemd/system/kodi_button
 rm /usr/lib/systemd/system/kodi_button
 rm /etc/systemd/system/multi-user.target.wants/kodi_button.service
+
 systemctl daemon-reload
 systemctl reset-failed
