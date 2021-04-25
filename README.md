@@ -11,5 +11,7 @@ Guide for Raspberry PI 4:
 Add following string: @reboot python /usr/local/bin/kodi_button.py &
 
 Uninstallation guide:
-1. cd kodi-button
-2. sudo ./uninstall
+1. sudo crontab -e  
+Remove following string: @reboot python /usr/local/bin/kodi_button.py &
+2. cd kodi-button
+3. sudo ./uninstall
