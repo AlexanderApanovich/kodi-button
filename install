@@ -1,14 +1,6 @@
 #! /bin/sh
 
-
 sudo apt install python3-gpiozero
 
 sudo mkdir -p /usr/local/bin
-
 sudo cp kodi_button.py /usr/local/bin
-sudo cp kodi_button.service /etc/systemd/system
-
-sudo systemctl enable kodi_button.service
-sudo systemctl start kodi_button.service
-
-sudo systemctl restart kodi_button.service
