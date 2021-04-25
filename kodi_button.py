@@ -7,6 +7,7 @@ gpio_pin = 17
 allProcessesCommand = "pgrep -f kodi".split()
 runKodiCommand = "nohup kodi &".split()
 closeKodiCommand = "kodi-send --host=192.168.100.17 --action='Quit'".split()
+openGUICommand = "sudo chvt 7".split()
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(gpio_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
@@ -30,8 +31,8 @@ def runKodi():
 
 def closeKodi():
     try:
-        command = closeKodiCommand
-        subprocess.check_output(command.split())
+        subprocess.check_output(closeKodiCommand)
+        subprocess.check_output(openGUICommand)
     except Exception:
         pass
 
@@ -39,9 +40,7 @@ def closeKodi():
 def update():
     kodiIsRunning = getKodiIsRunning()
     if kodiIsRunning:
-        pass
-        # TODO: issue #1 Black screen on kodi close 
-        # closeKodi()
+        closeKodi()
     else:
         runKodi()
 
