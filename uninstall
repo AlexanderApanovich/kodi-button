@@ -1,6 +1,5 @@
 #! /bin/sh
 
-cd "$(dirname "$0")/.."
 
 systemctl stop kodi_button
 systemctl disable kodi_button
