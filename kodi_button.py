@@ -6,7 +6,7 @@ gpio_pin = 17
 
 allProcessesCommand = "pgrep -f kodi".split()
 runKodiCommand = "nohup kodi &".split()
-closeKodiCommand = "kodi-send --host=192.168.100.17 --action='Quit'".split()
+closeKodiCommand = "pkill kodi".split()
 openGUICommand = "sudo chvt 7".split()
 
 GPIO.setmode(GPIO.BCM)

@@ -2,7 +2,6 @@
 
 
 sudo apt install python3-gpiozero
-sudo apt-get install kodi-eventclients-kodi-send
 
 sudo mkdir -p /usr/local/bin
 
