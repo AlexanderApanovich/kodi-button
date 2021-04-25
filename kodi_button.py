@@ -50,9 +50,6 @@ def init():
     while True:
         time.sleep(0.2)
         if GPIO.input(gpio_pin) == False:
-            pressed_time = time.time()
-            while GPIO.input(gpio_pin) == False:
-                time.sleep(0.2)
             update()
 
 
