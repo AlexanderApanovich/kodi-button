@@ -19,6 +19,7 @@ def getKodiIsRunning():
         pids = map(int, pids)
         return len(pids) > 0
     except Exception:
+        #TODO logging
         return False
 
 
@@ -26,6 +27,7 @@ def runKodi():
     try:
         subprocess.check_output(runKodiCommand)
     except Exception:
+        #TODO logging
         pass
 
 
@@ -34,6 +36,7 @@ def closeKodi():
         subprocess.check_output(closeKodiCommand)
         subprocess.check_output(openGUICommand)
     except Exception:
+        #TODO logging
         pass
 
 
@@ -47,8 +50,10 @@ def update():
 
 def init():
     while True:
-        time.sleep(0.2)
+        time.sleep(0.1)
         if GPIO.input(gpio_pin) == False:
+            while GPIO.input(gpio_pin) == False:
+                time.sleep(1)
             update()
 
 
