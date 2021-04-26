@@ -4,7 +4,7 @@ import RPi.GPIO as GPIO
 
 gpio_pin = 17
 
-allProcessesCommand = "pgrep -f kodi".split()
+allProcessesCommand = "pgrep -f kodi.bin".split()
 runKodiCommand = "nohup kodi &".split()
 closeKodiCommand = "pkill kodi".split()
 openGUICommand = "sudo chvt 7".split()
