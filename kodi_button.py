@@ -5,9 +5,9 @@ import RPi.GPIO as GPIO
 gpio_pin = 17
 
 allProcessesCommand = "pgrep -f kodi.bin".split()
-runKodiCommand = "nohup kodi &".split()
+runKodiCommand = "kodi".split()
 closeKodiCommand = "pkill kodi".split()
-openGUICommand = "sudo chvt 7".split()
+openGUICommand = "chvt 7".split()
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(gpio_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
