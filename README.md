@@ -1,4 +1,4 @@
-# Open/Close Kodi button
+# Open/Close Kodi button for Raspberry Pi 4
 
 Python script to run/close Kodi on button push
 
