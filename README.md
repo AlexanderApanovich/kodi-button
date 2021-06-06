@@ -1,4 +1,4 @@
-# kodi-button
+# Open/Close Kodi button
 
 Python script to run/close Kodi on button push
 
