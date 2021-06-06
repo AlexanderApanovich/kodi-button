@@ -1,3 +1,3 @@
 #! /bin/sh
 
-sudo rm /usr/local/bin/kodi_button.py
+sudo rm /usr/local/bin/rpi4_kodi_button.py
