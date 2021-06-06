@@ -3,4 +3,4 @@
 sudo apt install python3-gpiozero
 
 sudo mkdir -p /usr/local/bin
-sudo cp kodi_button.py /usr/local/bin
+sudo cp rpi4_kodi_button.py /usr/local/bin
